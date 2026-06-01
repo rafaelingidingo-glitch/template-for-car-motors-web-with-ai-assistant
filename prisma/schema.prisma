@@ -1,0 +1,81 @@
+// Prisma schema for Car Dealership Website
+// Database-agnostic: works with SQLite, MySQL, PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+// ─── Car Inventory Model ───
+// Stores all vehicle listings with detailed specs
+model Car {
+  id          String   @id @default(cuid())
+  brand       String   // e.g., Toyota, BMW, Mercedes
+  model       String   // e.g., Alphard, X5, C-Class
+  year        Int      // Manufacturing year
+  price       Int      // Price in Tanzanian Shillings (TSH) — stored as integer to avoid floating-point precision issues with large values
+  mileage     Int      // Current mileage in km
+  condition   String   // "New", "Used", "Refurbished"
+  fuelType    String   // "Petrol", "Diesel", "Hybrid", "Electric"
+  bodyType    String   // "SUV", "Sedan", "Truck", "Van", etc.
+  seats       Int      // Number of seats
+  doors       Int      // Number of doors
+  color       String   // Exterior color
+  status      String   @default("Available") // "Available" or "Sold"
+  description String?  // Optional detailed description
+  images      String   @default("[]") // JSON array of image URLs/paths
+  featured    Boolean  @default(false) // Featured car for hero display
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([brand])   // Index for brand filter
+  @@index([year])    // Index for year filter
+  @@index([fuelType]) // Index for fuel type filter
+  @@index([condition]) // Index for condition filter
+  @@index([bodyType]) // Index for body type filter
+  @@index([price])    // Index for price range filter
+  @@index([status])   // Index for availability filter
+}
+
+// ─── Site Settings Model ───
+// Global configuration for the dealership website
+model SiteSetting {
+  id        String   @id @default(cuid())
+  shopName  String   @default("AutoElite Motors")
+  logo      String   @default("")  // URL or path to logo image
+  phone     String   @default("")  // Primary phone number
+  email     String   @default("")  // Primary email
+  address   String   @default("")  // Physical address
+  location  String   @default("")  // Google Maps embed URL or coordinates
+  hours     String   @default("")  // Operating hours
+  whatsapp  String   @default("")  // WhatsApp number
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── Contact Messages Model ───
+// Stores messages from the contact form
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String   // Sender's name
+  email     String   // Sender's email
+  phone     String?  // Optional phone number
+  message   String   // Message content
+  read      Boolean  @default(false) // Whether admin has read it
+  createdAt DateTime @default(now())
+
+  @@index([read]) // Index for filtering unread messages
+}
+
+// ─── Admin User Model ───
+// Stores admin credentials for dashboard access
+model Admin {
+  id        String   @id @default(cuid())
+  username  String   @unique // Admin username
+  password  String   // Hashed password
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
