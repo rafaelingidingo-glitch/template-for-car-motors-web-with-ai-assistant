@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AutoElite Motors - Find Your Dream Car Today",
+  title: "Kasongo Motors - Find Your Dream Car Today",
   description: "Premium car dealership offering quality new and used vehicles with transparent pricing. Browse our curated inventory, get financing, and trade-in your car.",
   keywords: ["car dealership", "vehicles", "auto sales", "used cars", "new cars", "financing", "trade-in"],
-  authors: [{ name: "AutoElite Motors" }],
+  authors: [{ name: "Kasongo Motors" }],
   icons: {
     icon: "/logo.svg",
   },
