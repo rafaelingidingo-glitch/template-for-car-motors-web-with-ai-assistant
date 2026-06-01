@@ -164,7 +164,7 @@ export default function Footer({ shopName, phone, email, address }: FooterProps)
               © {new Date().getFullYear()} {shopName || "AutoElite Motors"}. {t.footer.allRightsReserved}
             </p>
             <p className="text-white/40 text-xs">
-              {t.footer.designedWith} <a href="rwextech.vercel.app">Rwex Tech Limited</a>
+              {t.footer.designedWith} <a href="https://rwextech.vercel.app/">Rwex Tech Limited</a>
             </p>
           </div>
         </div>

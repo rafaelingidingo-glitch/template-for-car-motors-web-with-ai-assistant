@@ -186,7 +186,7 @@ export const translations = {
       tradeIn: "Trade-In",
       description: "Your trusted partner in finding the perfect vehicle. Quality cars, transparent pricing, and exceptional service since 2009.",
       allRightsReserved: "All rights reserved.",
-      designedWith: "Designed with ❤️ for the best car buying experience",
+      designedWith: "Designed with: ",
     },
     // Language
     language: {
@@ -375,7 +375,7 @@ export const translations = {
       tradeIn: "Kubadilisha",
       description: "Rafiki yako wa kuaminika katika kupata gari linalofaa. Magari bora, bei wazi, na huduma bora tangu 2009.",
       allRightsReserved: "Haki zote zimehifadhiwa.",
-      designedWith: "Imeundwa kwa ❤️ kwa uzoefu bora wa kununua gari",
+      designedWith: "Imeundwa na: ",
     },
     // Language
     language: {
