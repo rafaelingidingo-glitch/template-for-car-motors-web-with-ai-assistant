@@ -30,7 +30,7 @@ export const translations = {
     about: {
       aboutUs: "About Us",
       whyChoose: "Why Choose",
-      autoElite: "AutoElite",
+      autoElite: "Kasongo Pelagy  Motors",
       subtitle: "We're more than just a car dealership — we're your trusted partner in finding the perfect vehicle.",
       ourStory: "Our Story",
       drivingDreams: "Driving Dreams Since 2009",
@@ -223,7 +223,7 @@ export const translations = {
     about: {
       aboutUs: "Kuhusu Sisi",
       whyChoose: "Kwa Nini Utuchague sisi",
-      autoElite: "AutoElite",
+      autoElite: "Kasongo Pelagy  Motors",
       subtitle: "Ni zaidi ya kituo cha kuuza magari - bali rafiki  wako wa kuaminika katika kupata gari lako bora zaidi.",
       ourStory: "Hadithi Yetu",
       drivingDreams: "Ndoto Za kuendesha  Tangu 2009",
