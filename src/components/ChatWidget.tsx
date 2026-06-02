@@ -83,8 +83,8 @@ export default function ChatWidget() {
         role: "assistant",
         content:
           locale === "sw"
-            ? "Karibu AutoElite Motors! 🚗 Niko hapa kukusaidia kwa maswali kuhusu magari, bei, mkopo, na huduma zingine. Unaweza kuuliza chochote!"
-            : "Welcome to AutoElite Motors! 🚗 I'm here to help you with any questions about vehicles, pricing, financing, trade-ins, and more. How can I assist you today?",
+            ? "Karibu shopname! 🚗 Niko hapa kukusaidia kwa maswali kuhusu magari, bei, mkopo, na huduma zingine. Unaweza kuuliza chochote!"
+            : "Welcome to shopname! 🚗 I'm here to help you with any questions about vehicles, pricing, financing, trade-ins, and more. How can I assist you today?",
         timestamp: new Date(),
       };
       setMessages([welcomeMsg]);

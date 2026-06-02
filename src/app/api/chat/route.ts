@@ -88,10 +88,10 @@ IMPORTANT: When a customer asks about specific vehicles, ONLY reference vehicles
 - Google Maps: ${settings.location}`;
     } else {
       cachedSettings = `**Company Details:**
-- Shop Name: Kasongo Motors
+- Shop Name: your shop name
 - Phone: +255 762686240
 - WhatsApp: +255 762686240
-- Email: info@kasongomotors.co.tz
+- Email: info@shopname.co.tz
 - Address: 123 Safari Drive, Dar es Salaam, Tanzania
 - Working Hours: Mon-Fri 8AM-6PM | Sat 9AM-4PM | Sun Closed`;
     }
@@ -101,10 +101,10 @@ IMPORTANT: When a customer asks about specific vehicles, ONLY reference vehicles
   } catch (error) {
     console.error("Error fetching dealership context:", error);
     return `**Company Details:**
-- Shop Name: Kasongo Motors
+- Shop Name: your shop name
 - Phone: +255 762686240
 - WhatsApp: +255 762686240
-- Email: info@kasongomotors.co.tz
+- Email: info@shopname.co.tz
 - Address: 123 Safari Drive, Dar es Salaam, Tanzania
 - Working Hours: Mon-Fri 8AM-6PM | Sat 9AM-4PM | Sun Closed
 
